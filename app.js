@@ -2,6 +2,8 @@ const express=require("express");
 const bodyParser=require("body-parser");
 const app=express();
 const http=require("https");
+require('dotenv').config();
+console.log(process.env);
 app.use(bodyParser.urlencoded({extension:true}));
 app.use(express.static("public"));
 app.get("/",function(req,res){
@@ -31,7 +33,7 @@ app.post("/",function(req,res){
     const options=
     {
         method:"POST",
-        auth:"aashish1:2ac356c3a924d75c9c98e196438a9b54-us21",
+        auth:"aashish1:"+process.env.api_key,
     };
     const request= http.request(url,options,function(response)
     {   
