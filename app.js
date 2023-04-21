@@ -67,7 +67,6 @@ app.listen(3000,function(){
 });
 
 
-// api key 
-//2ac356c3a924d75c9c98e196438a9b54-us21
+
 // audience id
 // 5c98c963ac.
